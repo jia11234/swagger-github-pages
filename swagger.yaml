@@ -1203,10 +1203,12 @@ paths:
     get:
       tags:
       - login-history-controller
+      summary: 전체 로그인 기록 조회
+      description: 전체 로그인 기록을 조회합니다.
       operationId: getAllLoginRecords
       responses:
         '200':
-          description: OK
+          description: 로그인 조회 성공
           content:
             "*/*":
               schema:
@@ -2326,9 +2328,9 @@ components:
       properties:
         memId:
           type: string
-        loginTime:
-          type: string
-          format: date-time
         loginId:
           type: integer
           format: int32
+        loginTime:
+          type: string
+          format: date-time
